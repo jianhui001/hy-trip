@@ -1,7 +1,8 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHashHistory(),
+  // 映射关系: path -> component
   routes: [
     {
       path: "/",
@@ -16,13 +17,24 @@ const router = createRouter({
       component: () => import("@/views/favor/favor.vue")
     },
     {
-      path: "/message",
-      component: () => import("@/views/message/message.vue")
-    },
-    {
       path: "/order",
       component: () => import("@/views/order/order.vue")
     },
+    {
+      path: "/message",
+      component: () => import("@/views/message/message.vue"),
+      meta: {
+        hideTabBar: true
+      }
+    },
+    {
+      path: "/city",
+      component: () => import("@/views/city/city.vue"),
+      meta: {
+        hideTabBar: true
+      }
+    },
+
   ]
 })
 

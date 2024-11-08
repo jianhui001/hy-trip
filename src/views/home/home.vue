@@ -1,28 +1,22 @@
 <template>
   <div class="home">
-    <div class="nav-bar">
-      <div class="title">Jianhui的旅行</div>
+    <home-nav-bar></home-nav-bar>
+    <div class="banner">
+      <img src="@/assets/img/home/banner.webp" alt="">
     </div>
+    <home-search-box></home-search-box>
   </div>
 </template>
 
 <script setup>
-
+import homeNavBar from './cpns/home-nav-bar.vue';
+import homeSearchBox from './cpns/home-search-box.vue';
 </script>
 
 <style lang="less" scoped>
-.home {
-  .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 46px;
-
-    .title {
-      color: var(--primary-color);
-      font-weight: 600;
-    }
+.banner {
+  img {
+    width: 100%;
   }
 }
 </style>
